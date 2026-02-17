@@ -5,6 +5,8 @@ docs.google.com
 gemini.google.com
 google.com
 googleapis.com
+generativelanguage.googleapis.com
+ai.googleapis.com
 googlecode.com
 googleoptimize.com
 googleusercontent.com
@@ -22,6 +24,7 @@ scholar.google.com
 keep.google.com
 hangouts.google.com
 myaccount.google.com
+accounts.google.com
 groups.google.com
 console.developers.google.com
 support.google.com
@@ -29,3 +32,5 @@ cloud.google.com
 gvt2.com
 gvt3.com
 google.ru
+gemini.google
+ai.google

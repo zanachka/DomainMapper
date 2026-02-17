@@ -1,8 +1,56 @@
 # Вспомогательные утилиты:
+- [extract_apex_domains - извлечение доменов первого уровня](#extract_apex_domains)
 - [subdomain - поиск субдоменов](#subdomain)
 - [verified - проверка активности доменов](#verified)
 - [convert - конвертер маршрутов](#convert)
 - [split - разбить список на файлы по 1000 строк](#split)
+
+## extract_apex_domains
+
+Скрипт для извлечения доменов первого уровня (apex domains) из списков доменов. Обрабатывает все txt-файлы в папке `platforms` и сохраняет результаты с уникальными apex-доменами в отдельную папку (может быть полезно для настройки DNS-маршрутизации в расширениях и конфигураторах).
+
+### Функции
+
+- Извлекает основной домен из поддоменов (например, из `subdomain.example.com` получает `example.com`)
+- Поддерживает двухуровневые TLD (например, `co.uk`, `com.au`)
+- Автоматически удаляет дубликаты
+- Обрабатывает все txt-файлы в папке `platforms` одновременно
+- Сохраняет результаты в папку `platforms_apex` с теми же именами файлов
+
+### Использование
+
+#### Linux/macOS
+
+1. Запустите скрипт из корневой директории проекта:
+
+   ```bash
+   python utilities/extract_apex_domains.py
+   ```
+
+2. Результаты будут сохранены в папке `platforms_apex`
+
+#### Windows
+
+1. Запустите `extract_apex_domains.bat` из любого места проекта
+
+2. Результаты будут сохранены в папке `platforms_apex`
+
+### Пример
+
+**Входной файл** (`platforms/dns-youtube.txt`):
+```
+r1.sn-0hvcpax-30a6.googlevideo.com
+manifest.googlevideo.com
+i.ytimg.com
+googleapis.com
+```
+
+**Выходной файл** (`platforms_apex/dns-youtube.txt`):
+```
+googleapis.com
+googlevideo.com
+ytimg.com
+```
 
 ## subdomain
 
