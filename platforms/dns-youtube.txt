@@ -7999,6 +7999,8 @@ v12.lscache8.googlevideo.com
 v23.lscache6.googlevideo.com
 youtu.be
 youtube.com
+m.youtube.com
+youtubekids.com
 youtubei.googleapis.com
 yt3.ggpht.com
 yt3.googleusercontent.com

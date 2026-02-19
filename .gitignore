@@ -1,0 +1,5 @@
+.venv/
+platforms_apex/
+config.ini
+custom-dns-list.txt
+domain-ip-resolve.txt
